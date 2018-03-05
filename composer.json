@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "opis/colibri": "2.0.x-dev"
+        "opis-colibri/permissions": "1.0.x-dev"
     },
     "autoload": {
         "psr-4": {
@@ -30,10 +30,6 @@
             "collector": {
                 "file": "src/Collector.php",
                 "class": "OpisColibri\\Users\\Collector"
-            },
-            "installer": {
-                "file": "src/Installer.php",
-                "class": "OpisColibri\\Users\\Installer"
             }
         },
         "branch-alias": {
