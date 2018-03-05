@@ -42,7 +42,7 @@ class PasswordCredentials implements IUserCredentials
      */
     public function validate(IUser $user): bool
     {
-        if (null === $password = make(IPasswordRepository::class)->getByUser($user)){
+        if (null === $password = make(IPasswordRepository::class)->getByUser($user)) {
             return false;
         }
 

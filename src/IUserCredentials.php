@@ -23,7 +23,7 @@ interface IUserCredentials
 {
     /**
      * Validate user's credentials
-     * 
+     *
      * @param IUser $user
      * @return boolean
      */

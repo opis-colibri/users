@@ -27,21 +27,21 @@ interface IUser
 {
     /**
      * User's id
-     * 
+     *
      * @return  string
      */
     public function id(): string;
 
     /**
      * Check if the user is admin
-     * 
+     *
      * @return  boolean
      */
     public function isAdmin(): bool;
 
     /**
      * Registration date
-     * 
+     *
      * @return  DateTime
      */
     public function registrationDate(): DateTime;
@@ -54,7 +54,7 @@ interface IUser
 
     /**
      * User's last login time
-     * 
+     *
      * @return  DateTime|null
      */
     public function lastLogin(): ?DateTime;
@@ -67,7 +67,7 @@ interface IUser
 
     /**
      * Check if user is active
-     * 
+     *
      * @return  boolean
      */
     public function isActive(): bool;
@@ -80,14 +80,14 @@ interface IUser
 
     /**
      * Check if user is an anonymous user
-     * 
+     *
      * @return  boolean
      */
     public function isAnonymous(): bool;
 
     /**
      * Get user's roles
-     * 
+     *
      * @return iterable|IRole[]
      */
     public function roles(): iterable;
@@ -100,16 +100,16 @@ interface IUser
 
     /**
      * Get user's permissions
-     * 
+     *
      * @return iterable|IPermission[]
      */
     public function permissions(): iterable;
 
     /**
      * Check if the user have the required permissions
-     * 
-     * @param   iterable|IPermission[]  $permissions
-     * 
+     *
+     * @param   iterable|IPermission[] $permissions
+     *
      * @return  boolean
      */
     public function hasPermissions(iterable $permissions);
