@@ -17,7 +17,7 @@
 
 namespace OpisColibri\Users\Security;
 
-use OpisColibri\User\Entities\IUser;
+use OpisColibri\Users\IUser;
 
 interface IPasswordRepository
 {

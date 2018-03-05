@@ -15,9 +15,7 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\User;
-
-use OpisColibri\User\Entities\IUser;
+namespace OpisColibri\Users;
 
 interface IUserSession
 {

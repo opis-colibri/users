@@ -18,8 +18,8 @@
 namespace OpisColibri\Users\Credentials;
 
 use function Opis\Colibri\Functions\make;
-use OpisColibri\User\Entities\IUser;
-use OpisColibri\User\IUserCredentials;
+use OpisColibri\Users\IUser;
+use OpisColibri\Users\IUserCredentials;
 use OpisColibri\Users\Security\IPasswordHandler;
 use OpisColibri\Users\Security\IPasswordRepository;
 

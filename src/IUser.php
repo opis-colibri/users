@@ -15,7 +15,7 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\User\Entities;
+namespace OpisColibri\Users;
 
 use DateTime;
 use OpisColibri\Permissions\{

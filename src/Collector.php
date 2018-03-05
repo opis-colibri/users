@@ -21,7 +21,6 @@ use Opis\Colibri\Collector as AbstractCollector;
 use function Opis\Colibri\Functions\make;
 use Opis\Colibri\ItemCollectors\ContractCollector;
 use Opis\Colibri\ItemCollectors\RouteCollector;
-use OpisColibri\User\IUserSession;
 use OpisColibri\Users\Impl\PasswordHandler;
 use OpisColibri\Users\Security\IPasswordHandler;
 
