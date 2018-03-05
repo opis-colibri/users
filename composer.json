@@ -1,0 +1,43 @@
+{
+    "name": "opis-colibri/users",
+    "type": "opis-colibri-module",
+    "description": "Users module",
+    "keywords": ["opis", "colibri", "module", "users module"],
+    "homepage": "http://opis.io",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Marius Sarca",
+            "email": "marius.sarca@gmail.com"
+        }
+    ],
+    "require": {
+        "opis/colibri": "2.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpisColibri\\Users\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "module": {
+            "title": "Users module",
+            "collector": {
+                "file": "src/Collector.php",
+                "class": "OpisColibri\\Users\\Collector"
+            },
+            "installer": {
+                "file": "src/Installer.php",
+                "class": "OpisColibri\\Users\\Installer"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
