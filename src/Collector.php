@@ -21,7 +21,9 @@ use Opis\Colibri\Collector as AbstractCollector;
 use function Opis\Colibri\Functions\make;
 use Opis\Colibri\ItemCollectors\ContractCollector;
 use Opis\Colibri\ItemCollectors\RouteCollector;
+use OpisColibri\Users\Impl\AnonymousUser;
 use OpisColibri\Users\Impl\PasswordHandler;
+use OpisColibri\Users\Impl\UserSession;
 use OpisColibri\Users\Security\IPasswordHandler;
 
 class Collector extends AbstractCollector
@@ -52,5 +54,7 @@ class Collector extends AbstractCollector
     public function contracts(ContractCollector $contract)
     {
         $contract->singleton(IPasswordHandler::class, PasswordHandler::class);
+        $contract->singleton(IUserSession::class, UserSession::class);
+        $contract->singleton(IAnonymousUser::class, AnonymousUser::class);
     }
 }
