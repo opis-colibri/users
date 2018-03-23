@@ -32,9 +32,18 @@ interface IUserSession
      * Sign out this user
      *
      * @param IUser $user
+     * @param string $key
      * @return boolean
      */
-    public function signOut(IUser $user): bool;
+    public function signOut(IUser $user, string $key): bool;
+
+    /**
+     * Get user's sign-out key
+     *
+     * @param IUser $user
+     * @return string
+     */
+    public function getSignOutKey(IUser $user): string;
 
     /**
      * Get current user

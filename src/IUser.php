@@ -33,6 +33,49 @@ interface IUser
     public function id(): string;
 
     /**
+     * Get user's human-readable name
+     *
+     * @return string
+     */
+    public function name(): string;
+
+    /**
+     * Set user's human-readable name
+     *
+     * @param string $name
+     * @return IUser
+     */
+    public function setName(string $name): self;
+
+    /**
+     * Get user's email address
+     *
+     * @return string
+     */
+    public function email(): string;
+
+    /**
+     * Set user's unique email address
+     *
+     * @param string $email
+     * @return IUser
+     */
+    public function setEmail(string $email): self ;
+
+    /**
+     * Get user's avatar
+     * @return null|string
+     */
+    public function avatar(): ?string;
+
+    /**
+     * Set user's avatar
+     * @param string|null $avatar
+     * @return IUser
+     */
+    public function setAvatar(string $avatar = null): self;
+
+    /**
      * Check if the user is admin
      *
      * @return  boolean

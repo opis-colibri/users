@@ -22,12 +22,13 @@ use OpisColibri\Users\{
     IAnonymousUser, IUser, IUserCredentials, IUserRepository, IUserSession
 };
 use function Opis\Colibri\Functions\{
-    make, session
+    make, session, uuid4
 };
 
 class UserSession implements IUserSession
 {
     const USER_KEY = 'authenticated_user';
+    const SIGN_OUT_KEY = 'sign_out_key';
 
     /** @var  AnonymousUser|null */
     private $anonymous = null;
@@ -48,6 +49,7 @@ class UserSession implements IUserSession
             $user->setLastLogin(new DateTime());
             make(IUserRepository::class)->save($user);
             session()->set(self::USER_KEY, $user->id());
+            session()->set(self::SIGN_OUT_KEY, uuid4(''));
             $this->user = $user;
             return true;
         }
@@ -58,14 +60,35 @@ class UserSession implements IUserSession
     /**
      * @inheritDoc
      */
-    public function signOut(IUser $user): bool
+    public function signOut(IUser $user, string $key): bool
     {
         if ($user instanceof IAnonymousUser) {
+            return false;
+        }
+        if (session()->get(self::USER_KEY) !== $user->id()){
+            return false;
+        }
+        if (session()->get(self::SIGN_OUT_KEY) !== $key) {
             return false;
         }
         $this->user = null;
         return session()->destroy();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSignOutKey(IUser $user): string
+    {
+        if ($user instanceof IAnonymousUser) {
+            return uuid4();
+        }
+        if (session()->get(self::USER_KEY) !== $user->id()){
+            return uuid4();
+        }
+        return session()->get(self::SIGN_OUT_KEY);
+    }
+
 
     /**
      * @inheritDoc

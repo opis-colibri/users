@@ -34,6 +34,13 @@ interface IUserRepository
     public function getById(string $id): ?IUser;
 
     /**
+     * Load a user using their email address
+     * @param string $email
+     * @return null|IUser
+     */
+    public function getByEmail(string $email): ?IUser;
+
+    /**
      * Save modified user
      *
      * @param IUser $user
