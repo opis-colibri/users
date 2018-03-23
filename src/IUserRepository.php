@@ -29,9 +29,9 @@ interface IUserRepository
      * @param int $start
      * @param int $count
      * @param array $filters
-     * @return mixed
+     * @return iterable|IUser[]
      */
-    public function getAll(int $start = 0, int $count = 25, array $filters = []);
+    public function getAll(int $start = 0, int $count = 25, array $filters = []): iterable;
 
     /**
      * Load a user by id
