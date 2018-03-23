@@ -51,4 +51,9 @@ interface IUserSession
      * @return IUser
      */
     public function currentUser(): IUser;
+
+    /**
+     * @return string
+     */
+    public function getAdminId(): string;
 }

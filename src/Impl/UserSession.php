@@ -22,7 +22,7 @@ use OpisColibri\Users\{
     IAnonymousUser, IUser, IUserCredentials, IUserRepository, IUserSession
 };
 use function Opis\Colibri\Functions\{
-    make, session, uuid4
+    config, make, session, uuid4
 };
 
 class UserSession implements IUserSession
@@ -115,5 +115,13 @@ class UserSession implements IUserSession
         }
 
         return $this->anonymous;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAdminId(): string
+    {
+        return config()->read('user.admin', '');
     }
 }
