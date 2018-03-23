@@ -26,6 +26,14 @@ interface IUserRepository
     public function create(): IUser;
 
     /**
+     * @param int $start
+     * @param int $count
+     * @param array $filters
+     * @return mixed
+     */
+    public function getAll(int $start = 0, int $count = 25, array $filters = []);
+
+    /**
      * Load a user by id
      *
      * @param string $id
