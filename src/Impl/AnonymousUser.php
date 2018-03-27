@@ -18,12 +18,12 @@
 namespace OpisColibri\Users\Impl;
 
 use DateTime;
-use function Opis\Colibri\Functions\make;
 use OpisColibri\Permissions\IPermission;
 use OpisColibri\Permissions\IRole;
 use OpisColibri\Permissions\IRoleRepository;
 use OpisColibri\Users\IAnonymousUser;
 use OpisColibri\Users\IUser;
+use function Opis\Colibri\Functions\make;
 
 class AnonymousUser implements IAnonymousUser
 {
@@ -33,6 +33,54 @@ class AnonymousUser implements IAnonymousUser
     public function id(): string
     {
         return '';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function name(): string
+    {
+        return 'Anonymous';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setName(string $name): IUser
+    {
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function email(): string
+    {
+        return '';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setEmail(string $email): IUser
+    {
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function avatar(): ?string
+    {
+        return null;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setAvatar(string $avatar = null): IUser
+    {
+        return $this;
     }
 
     /**
@@ -135,7 +183,7 @@ class AnonymousUser implements IAnonymousUser
     /**
      * @inheritDoc
      */
-    public function hasPermissions(array $permissions)
+    public function hasPermissions(iterable $permissions)
     {
         /** @var IPermission $user_permission */
         foreach ($this->permissions() as $user_permission) {
