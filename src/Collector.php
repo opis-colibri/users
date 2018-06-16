@@ -20,7 +20,7 @@ namespace OpisColibri\Users;
 use Opis\Colibri\Collector as AbstractCollector;
 use function Opis\Colibri\Functions\make;
 use Opis\Colibri\ItemCollectors\ContractCollector;
-use Opis\Colibri\ItemCollectors\RouteGlobalsCollector;
+use Opis\Colibri\ItemCollectors\RouterGlobalsCollector;
 use OpisColibri\Users\Impl\AnonymousUser;
 use OpisColibri\Users\Impl\PasswordHandler;
 use OpisColibri\Users\Impl\UserSession;
@@ -39,9 +39,9 @@ class Collector extends AbstractCollector
     }
 
     /**
-     * @param RouteGlobalsCollector $global
+     * @param RouterGlobalsCollector $global
      */
-    public function routeGlobals(RouteGlobalsCollector $global)
+    public function routerGlobals(RouterGlobalsCollector $global)
     {
         $global->bind('user', function () {
             return make(IUserSession::class)->currentUser();
