@@ -15,9 +15,9 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Users\Impl;
+namespace Opis\Colibri\Modules\Users\Impl;
 
-use OpisColibri\Users\Security\IPasswordHandler;
+use Opis\Colibri\Modules\Users\Security\IPasswordHandler;
 
 class PasswordHandler implements IPasswordHandler
 {

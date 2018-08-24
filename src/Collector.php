@@ -15,16 +15,14 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Users;
+namespace Opis\Colibri\Modules\Users;
 
 use Opis\Colibri\Collector as AbstractCollector;
 use function Opis\Colibri\Functions\make;
 use Opis\Colibri\ItemCollectors\ContractCollector;
 use Opis\Colibri\ItemCollectors\RouterGlobalsCollector;
-use OpisColibri\Users\Impl\AnonymousUser;
-use OpisColibri\Users\Impl\PasswordHandler;
-use OpisColibri\Users\Impl\UserSession;
-use OpisColibri\Users\Security\IPasswordHandler;
+use Opis\Colibri\Modules\Users\Impl\{AnonymousUser, PasswordHandler, UserSession};
+use Opis\Colibri\Modules\Users\Security\IPasswordHandler;
 
 class Collector extends AbstractCollector
 {

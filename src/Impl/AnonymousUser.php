@@ -15,14 +15,12 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Users\Impl;
+namespace Opis\Colibri\Modules\Users\Impl;
 
 use DateTime;
-use OpisColibri\Permissions\IPermission;
-use OpisColibri\Permissions\IRole;
-use OpisColibri\Permissions\IRoleRepository;
-use OpisColibri\Users\IAnonymousUser;
-use OpisColibri\Users\IUser;
+use Opis\Colibri\Modules\Permissions\{IPermission, IRole, IRoleRepository};
+use Opis\Colibri\Modules\Users\IAnonymousUser;
+use Opis\Colibri\Modules\Users\IUser;
 use function Opis\Colibri\Functions\make;
 
 class AnonymousUser implements IAnonymousUser

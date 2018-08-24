@@ -15,7 +15,7 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Users\Security;
+namespace Opis\Colibri\Modules\Users\Security;
 
 interface IPasswordHandler
 {

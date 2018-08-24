@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "OpisColibri\\Users\\": "src/"
+            "Opis\\Colibri\\Modules\\Users\\": "src/"
         }
     },
     "config": {
@@ -27,10 +27,7 @@
     "extra": {
         "module": {
             "title": "Users module",
-            "collector": {
-                "file": "src/Collector.php",
-                "class": "OpisColibri\\Users\\Collector"
-            }
+            "collector": "Opis\\Colibri\\Modules\\Users\\Collector"
         },
         "branch-alias": {
             "dev-master": "1.0.x-dev"

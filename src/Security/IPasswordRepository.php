@@ -15,9 +15,9 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Users\Security;
+namespace Opis\Colibri\Modules\Users\Security;
 
-use OpisColibri\Users\IUser;
+use Opis\Colibri\Modules\Users\IUser;
 
 interface IPasswordRepository
 {

@@ -15,13 +15,13 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Users\Credentials;
+namespace Opis\Colibri\Modules\Users\Credentials;
 
 use function Opis\Colibri\Functions\make;
-use OpisColibri\Users\IUser;
-use OpisColibri\Users\IUserCredentials;
-use OpisColibri\Users\Security\IPasswordHandler;
-use OpisColibri\Users\Security\IPasswordRepository;
+use Opis\Colibri\Modules\Users\IUser;
+use Opis\Colibri\Modules\Users\IUserCredentials;
+use Opis\Colibri\Modules\Users\Security\IPasswordHandler;
+use Opis\Colibri\Modules\Users\Security\IPasswordRepository;
 
 class PasswordCredentials implements IUserCredentials
 {

@@ -15,10 +15,10 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Users;
+namespace Opis\Colibri\Modules\Users;
 
 use DateTime;
-use OpisColibri\Permissions\{
+use Opis\Colibri\Modules\Permissions\{
     IRole,
     IPermission
 };
@@ -60,7 +60,7 @@ interface IUser
      * @param string $email
      * @return IUser
      */
-    public function setEmail(string $email): self ;
+    public function setEmail(string $email): self;
 
     /**
      * Get user's avatar

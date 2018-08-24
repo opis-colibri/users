@@ -15,10 +15,10 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Users\Impl;
+namespace Opis\Colibri\Modules\Users\Impl;
 
 use DateTime;
-use OpisColibri\Users\{
+use Opis\Colibri\Modules\Users\{
     IAnonymousUser, IUser, IUserCredentials, IUserRepository, IUserSession
 };
 use function Opis\Colibri\Functions\{
@@ -65,7 +65,7 @@ class UserSession implements IUserSession
         if ($user instanceof IAnonymousUser) {
             return false;
         }
-        if (session()->get(self::USER_KEY) !== $user->id()){
+        if (session()->get(self::USER_KEY) !== $user->id()) {
             return false;
         }
         if (session()->get(self::SIGN_OUT_KEY) !== $key) {
@@ -83,7 +83,7 @@ class UserSession implements IUserSession
         if ($user instanceof IAnonymousUser) {
             return uuid4();
         }
-        if (session()->get(self::USER_KEY) !== $user->id()){
+        if (session()->get(self::USER_KEY) !== $user->id()) {
             return uuid4();
         }
         return session()->get(self::SIGN_OUT_KEY);
