@@ -41,9 +41,7 @@ class Collector extends AbstractCollector
      */
     public function routerGlobals(RouterGlobalsCollector $global)
     {
-        $global->bind('user', function () {
-            return make(IUserSession::class)->currentUser();
-        });
+        $global->bind('user', UserSession::class . '::getCurrentUser');
     }
 
     /**

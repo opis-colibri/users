@@ -124,4 +124,12 @@ class UserSession implements IUserSession
     {
         return config()->read('user.admin', '');
     }
+
+    /**
+     * @return IUser
+     */
+    public static function getCurrentUser(): IUser
+    {
+        return make(IUserSession::class)->currentUser();
+    }
 }
