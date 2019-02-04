@@ -76,11 +76,11 @@ interface IUser
     public function setAvatar(string $avatar = null): self;
 
     /**
-     * Check if the user is admin
+     * Check if the user is the owner of the webapp
      *
      * @return  boolean
      */
-    public function isAdmin(): bool;
+    public function isOwner(): bool;
 
     /**
      * Registration date

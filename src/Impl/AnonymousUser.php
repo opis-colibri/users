@@ -84,7 +84,7 @@ class AnonymousUser implements IAnonymousUser
     /**
      * @inheritDoc
      */
-    public function isAdmin(): bool
+    public function isOwner(): bool
     {
         return false;
     }
