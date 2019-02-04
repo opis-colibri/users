@@ -55,5 +55,5 @@ interface IUserSession
     /**
      * @return string
      */
-    public function getAdminId(): string;
+    public function getOwnerId(): string;
 }

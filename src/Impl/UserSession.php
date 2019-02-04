@@ -120,9 +120,9 @@ class UserSession implements IUserSession
     /**
      * @inheritDoc
      */
-    public function getAdminId(): string
+    public function getOwnerId(): string
     {
-        return config()->read('user.admin', '');
+        return config()->read('user.owner', '');
     }
 
     /**
